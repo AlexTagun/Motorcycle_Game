@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MotorcycleController : MonoBehaviour {
-    [SerializeField] private Rigidbody2D backWheel; 
-    [SerializeField] private Rigidbody2D frontWheel;
-    [SerializeField]private float speed;
-    
+    [SerializeField] private WheelJoint2D backWheel; 
+    [SerializeField] private WheelJoint2D frontWheel;
+    [SerializeField] private float speed;
+
+    private JointMotor2D _motor;
     private float _movement;
 
     private void Update() {
@@ -15,7 +16,9 @@ public class MotorcycleController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        backWheel.AddTorque(_movement * speed * Time.fixedDeltaTime);
-        frontWheel.AddTorque(_movement * speed * Time.fixedDeltaTime);
+        _motor.maxMotorTorque = 999999999;
+        _motor.motorSpeed = _movement * speed;
+        backWheel.motor = _motor;
+        frontWheel.motor = _motor;
     }
 }
