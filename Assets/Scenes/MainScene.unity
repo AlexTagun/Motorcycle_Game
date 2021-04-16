@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 790560901}
   - component: {fileID: 790560900}
   - component: {fileID: 790560903}
+  - component: {fileID: 790560904}
   m_Layer: 0
   m_Name: SpriteShapeProfile
   m_TagString: Untagged
@@ -461,6 +462,19 @@ EdgeCollider2D:
   - {x: -5.620671, y: -2.7891338}
   - {x: -5.6196966, y: -2.6842632}
   - {x: -5.619351, y: -2.646995}
+--- !u!114 &790560904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790560899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e40b522eadde984fb1aa31eebcb44f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 790560900}
 --- !u!1 &927223692
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +631,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -689,6 +704,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d4a39653598c84a944bd056ff4be9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motorcycleTransform: {fileID: 971389314}
 --- !u!1 &971389310
 GameObject:
   m_ObjectHideFlags: 0
