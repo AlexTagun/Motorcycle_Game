@@ -14,8 +14,6 @@ public class UiWheelie : MonoBehaviour {
     private float _timeLeft = 0;
 
     private void Update() {
-        Debug.Log($"backWheel = {backWheel.IsTouching(terrainA)}, frontWheel = {frontWheel.IsTouching(terrainA)}");
-
         if (backWheel.IsTouching(terrainA) && !frontWheel.IsTouching(terrainA)
             || backWheel.IsTouching(terrainB) && !frontWheel.IsTouching(terrainB)) {
             _timeLeft = _fadeTime;
