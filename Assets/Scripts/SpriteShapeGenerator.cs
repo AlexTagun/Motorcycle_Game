@@ -8,24 +8,28 @@ public class SpriteShapeGenerator : MonoBehaviour {
     [SerializeField] private SpriteShapeController spriteShape;
     [SerializeField] private EdgeCollider2D _collider;
 
-    private void Start() {
+    public void GenerateShape(float[] heights) {
         var spline = spriteShape.spline;
         spline.Clear();
-        var heights = GenerateHeights();
-        
-        
+
         int i = 0;
         for (i = 0; i < heights.Length; i++) {
             spline.InsertPointAt(i, new Vector3(i * 2, heights[i], 0));
+            
+            if (i == heights.Length - 1 || i == 0) {
+                spline.SetTangentMode(i, ShapeTangentMode.Linear);
+                continue;
+            }
+            
             spline.SetTangentMode(i, ShapeTangentMode.Broken);
             spline.SetLeftTangent(i, new Vector3(-1, 0, 0));
             spline.SetRightTangent(i, new Vector3(1, 0, 0));
         }
         
         spline.InsertPointAt(i, new Vector3((i - 1) * 2, -5, 0));
-        spline.SetTangentMode(i, ShapeTangentMode.Broken);
+        spline.SetTangentMode(i, ShapeTangentMode.Linear);
         spline.InsertPointAt(i + 1, new Vector3(0, -5, 0));
-        spline.SetTangentMode(i + 1, ShapeTangentMode.Broken);
+        spline.SetTangentMode(i + 1, ShapeTangentMode.Linear);
         
         // spriteShape.RefreshSpriteShape();
         // spriteShape.UpdateSpriteShapeParameters();
@@ -48,7 +52,7 @@ public class SpriteShapeGenerator : MonoBehaviour {
 
     private float[] GenerateHeights() {
         return new float[] {
-            0, 0, 0, 0, 1, 2, 3, 2, 1, 1, 1, 0, 0
+            0, 0, 0, 0, 1, 2, 3, 2, 1, 1, 1, 0, 3, 4, 3, 2, 1, 0, 1, 0,
         };
     }
 }
