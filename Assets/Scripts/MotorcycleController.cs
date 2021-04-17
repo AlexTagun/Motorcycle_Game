@@ -12,7 +12,16 @@ public class MotorcycleController : MonoBehaviour {
     private float _movement;
 
     private void Update() {
+#if UNITY_EDITOR
         _movement = Input.GetAxis("Horizontal");
+        return;
+#endif
+        if(Input.touchCount < 1) return;
+
+        bool isRightSideClick = Input.touches[0].position.x > Screen.width / (float) 2;
+
+        _movement = isRightSideClick ? 1 : 0;
+
     }
 
     private void FixedUpdate() {
