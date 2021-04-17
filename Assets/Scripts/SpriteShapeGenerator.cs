@@ -19,7 +19,7 @@ public class SpriteShapeGenerator : MonoBehaviour {
 
         int i = 0;
         for (i = 0; i < heights.Length; i++) {
-            spline.InsertPointAt(i, new Vector3(i * _cellWidth, heights[i], 0));
+            spline.InsertPointAt(i, new Vector3(i * _cellWidth + 0.01f, heights[i], 0));
             
             if (i == heights.Length - 1 || i == 0) {
                 spline.SetTangentMode(i, ShapeTangentMode.Linear);
