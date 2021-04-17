@@ -212,7 +212,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1322068386}
-  - {fileID: 1992070112}
+  - {fileID: 1583577026}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -462,6 +462,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteShape: {fileID: 790560900}
   _collider: {fileID: 790560903}
+--- !u!58 &927223697 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5144009922027266352, guid: 6ec652e023b04fa45b9213e7a198aa22,
+    type: 3}
+  m_PrefabInstance: {fileID: 5144009922316431009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1034,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 1322068387}
   motorcycle: {fileID: 971389314}
+--- !u!1 &1583577025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583577026}
+  - component: {fileID: 1583577027}
+  m_Layer: 5
+  m_Name: ui_wheelie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1583577026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583577025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1992070112}
+  m_Father: {fileID: 21012132}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1583577027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583577025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e6935ada39aa14ba2aea21808ff514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backWheel: {fileID: 927223697}
+  frontWheel: {fileID: 1686189742}
+  terrainA: {fileID: 790560903}
+  terrainB: {fileID: 1028812431}
+  text: {fileID: 1992070111}
+--- !u!58 &1686189742 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5144009922777733135, guid: 6ec652e023b04fa45b9213e7a198aa22,
+    type: 3}
+  m_PrefabInstance: {fileID: 5144009922316431009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816085334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,12 +1185,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992070111}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 21012132}
-  m_RootOrder: 1
+  m_Father: {fileID: 1583577026}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
