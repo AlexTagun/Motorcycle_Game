@@ -38,13 +38,5 @@ public class SpriteShapeGenerator : MonoBehaviour {
         
         spriteShape.BakeMesh();
         spriteShape.BakeCollider();
-        
-        // var list = new List<Vector2>();
-        //
-        // for (i = 0; i < spline.GetPointCount(); i++) {
-        //     list.Add(spline.GetPosition(i));
-        // }
-        //
-        // _collider.points = list.ToArray();
     }
 }
