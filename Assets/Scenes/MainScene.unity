@@ -462,12 +462,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteShape: {fileID: 790560900}
   _collider: {fileID: 790560903}
---- !u!58 &927223697 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5144009922027266352, guid: 6ec652e023b04fa45b9213e7a198aa22,
-    type: 3}
-  m_PrefabInstance: {fileID: 5144009922316431009}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,17 +1077,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e6935ada39aa14ba2aea21808ff514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backWheel: {fileID: 927223697}
-  frontWheel: {fileID: 1686189742}
+  backWheel: {fileID: 5144009922316431011}
+  frontWheel: {fileID: 5144009922316431010}
   terrainA: {fileID: 790560903}
   terrainB: {fileID: 1028812431}
   text: {fileID: 1992070111}
---- !u!58 &1686189742 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5144009922777733135, guid: 6ec652e023b04fa45b9213e7a198aa22,
-    type: 3}
-  m_PrefabInstance: {fileID: 5144009922316431009}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816085334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,3 +1350,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec652e023b04fa45b9213e7a198aa22, type: 3}
+--- !u!58 &5144009922316431010 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1564005522176969971, guid: 6ec652e023b04fa45b9213e7a198aa22,
+    type: 3}
+  m_PrefabInstance: {fileID: 5144009922316431009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &5144009922316431011 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4183576723398667111, guid: 6ec652e023b04fa45b9213e7a198aa22,
+    type: 3}
+  m_PrefabInstance: {fileID: 5144009922316431009}
+  m_PrefabAsset: {fileID: 0}
