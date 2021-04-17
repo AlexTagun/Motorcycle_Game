@@ -7,6 +7,6 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private Transform motorcycleTransform;
 
     private void Update() {
-        transform.position = new Vector3(motorcycleTransform.position.x, 1, -10);
+        transform.position = new Vector3(motorcycleTransform.position.x, motorcycleTransform.position.y, -10);
     }
 }
