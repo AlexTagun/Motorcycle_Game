@@ -1060,6 +1060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30411c4c0aa154c4e954228a29ddd9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heightsCount: 20
+  cellWidth: 5
   A: {fileID: 790560904}
   B: {fileID: 1028812430}
 --- !u!61 &1257172318
